@@ -4,10 +4,12 @@ public class SportsApp {
     public  static  void  main(String[] args){
 
         // create the object
-        BasketballCoach basketballCoach = new BasketballCoach();
+        Coach basketballCoach = new BasketballCoach();
+        Coach footBallCoach = new FootBallCoach();
 
-        //use the object
+
         System.out.println(basketballCoach.getDailyWorkout());
+        System.out.println(footBallCoach.getDailyWorkout());
     }
 
 }
