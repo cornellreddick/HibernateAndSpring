@@ -18,6 +18,10 @@
     <bean id="myCoach"
           class="com.springdemo.FootBallCoach">
     </bean>
+
+    <bean id="myTrackCoach"
+          class="com.springdemo.TrackCoach">
+    </bean>
     
 </beans>
 
