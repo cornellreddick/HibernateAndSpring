@@ -22,6 +22,10 @@
     <bean id="myTrackCoach"
           class="com.springdemo.TrackCoach">
     </bean>
+
+    <bean id="myGolfCoach"
+          class="com.springdemo.GolfCoach">
+    </bean>
     
 </beans>
 
