@@ -14,18 +14,29 @@
         <property name="printedLoggerLevel" value="FINE"/>
     </bean>
 
+    <!-- Define the dependency -->
+    <bean id="myFortune" class="com.springdemo.HappyFortuneService"></bean>
+
     <!-- Define your beans here -->
+<!--    <bean id="myCoach"-->
+<!--          class="com.springdemo.FootBallCoach">-->
+<!--    </bean>-->
+
     <bean id="myCoach"
-          class="com.springdemo.FootBallCoach">
+          class="com.springdemo.BasketballCoach">
+
+    <!--   set up constructor injection     -->
+        <constructor-arg ref = "myFortune"/>
+
     </bean>
 
-    <bean id="myTrackCoach"
-          class="com.springdemo.TrackCoach">
-    </bean>
+<!--    <bean id="myTrackCoach"-->
+<!--          class="com.springdemo.TrackCoach">-->
+<!--    </bean>-->
 
-    <bean id="myGolfCoach"
-          class="com.springdemo.GolfCoach">
-    </bean>
+<!--    <bean id="myGolfCoach"-->
+<!--          class="com.springdemo.GolfCoach">-->
+<!--    </bean>-->
     
 </beans>
 

@@ -5,4 +5,9 @@ public class FootBallCoach implements Coach {
     public String getDailyWorkout() {
         return "Do 25 sprints!";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }

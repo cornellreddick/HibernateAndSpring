@@ -5,4 +5,9 @@ public class GolfCoach implements Coach{
     public String getDailyWorkout() {
         return "25 swings with the Driver.";
     }
+
+    @Override
+    public String getDailyFortune() {
+        return null;
+    }
 }
