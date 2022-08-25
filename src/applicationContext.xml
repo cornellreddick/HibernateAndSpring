@@ -23,7 +23,7 @@
 <!--    </bean>-->
 
     <bean id="myCoach"
-          class="com.springdemo.BasketballCoach">
+          class="com.springdemo.TrackCoach">
 
     <!--   set up constructor injection     -->
         <constructor-arg ref = "myFortune"/>
