@@ -37,6 +37,11 @@
 <!--    <bean id="myGolfCoach"-->
 <!--          class="com.springdemo.GolfCoach">-->
 <!--    </bean>-->
+
+    <bean id="mySoccerCoach" class="com.springdemo.SoccerCoach">
+<!--        set up setter injection -->
+        <property name="fortuneService" ref="myFortune"/>
+    </bean>
     
 </beans>
 
