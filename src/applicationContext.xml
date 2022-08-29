@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--
 	Add a logger config to see logging messages.
 	- For more detailed logs, set values to "FINEST"
 	- For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
+
  -->
+<!-- load the properties file: coach.properties -->
+    <context:property-placeholder location="classpath:application.properties"/>
+
     <bean id="LoggerConfig" class="com.springdemo.LoggerConfig" init-method="initLogger">
         <property name="rootLoggerLevel" value="FINE" />
         <property name="printedLoggerLevel" value="FINE"/>
@@ -43,8 +50,8 @@
         <property name="fortuneService" ref="myFortune"/>
 
 <!--        inject literal values-->
-        <property name="emailAddress" value="beastCoach@gmail.com"/>
-        <property name="team" value="Chicago Bears"/>
+        <property name="emailAddress" value="${coach.email}"/>
+        <property name="team" value="${coach.team}"/>
     </bean>
 
 
